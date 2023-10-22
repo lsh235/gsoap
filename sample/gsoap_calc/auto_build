@@ -1,0 +1,11 @@
+#!/bin/bash
+
+aclocal
+autoheader
+autoconf
+sleep 1
+touch AUTHORS ChangeLog NEWS README
+automake --add-missing
+sleep 1
+./configure
+make
